@@ -16,7 +16,6 @@ body{
   font-family:sans-serif;
 }
 
-/* ================= SCREEN 1 ================= */
 
 .screen1{
   width:100vw;
@@ -37,7 +36,6 @@ body{
   letter-spacing:5px;
 }
 
-/* ================= CLOCK ================= */
 
 .clock-wrap{
   position:absolute;
@@ -53,7 +51,6 @@ body{
   cursor:pointer;
 }
 
-/* ================= SCREEN 2 ================= */
 
 .screen2{
   position:fixed;
@@ -64,23 +61,22 @@ body{
   background:#8CFF3F;
 
   display:flex;
-  justify-content:flex-end;   /* 👉 오른쪽 정렬 */
+  justify-content:flex-end;  
   align-items:center;
   text-align:right;
 
-  padding-right:120px;        /* 👉 오른쪽 여백 */
+  padding-right:120px;      
 
   transform:translateY(100%);
-  transition:transform 0.6s ease;  /* 👈 그냥 부드럽게 */
+  transition:transform 0.6s ease; 
   z-index:10;
 }
 
-/* 살짝 등장 */
+
 .screen2.peek{
   transform:translateY(92%);
 }
 
-/* 전체로 올라오기 */
 .screen2.active{
   transform:translateY(0%);
 }
@@ -99,7 +95,7 @@ body{
 .spectator2{
   font-family:'Vous', sans-serif;
   display:inline-block;
-  letter-spacing:-30px;   /* 👈 이 값 조절 */
+  letter-spacing:-30px; 
 
 }
 
@@ -111,7 +107,7 @@ body{
   animation: crawl 0.6s ease-in-out infinite;
 }
 
-/* 글자마다 딜레이 줘서 애벌레 느낌 */
+
 .spectator2 span:nth-child(1){ animation-delay:0s; }
 .spectator2 span:nth-child(2){ animation-delay:0.05s; }
 .spectator2 span:nth-child(3){ animation-delay:0.1s; }
@@ -189,7 +185,7 @@ body{
   }
 
   .spectator2 {
-    letter-spacing: -10px;   /* -30px는 모바일에서 위험 */
+    letter-spacing: -10px;  
   }
 
   .home-btn {
