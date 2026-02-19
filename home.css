@@ -26,7 +26,6 @@ html, body {
   inset: 0;
 }
 
-
 .title {
   position: absolute;
   top: -20px;
@@ -39,76 +38,37 @@ html, body {
   white-space: nowrap;
 }
 
-
 .menu {
   position: absolute;
   bottom: 25px;
   left: 0;
-  right: 0;
-  padding: 0 10px;
 
   display: flex;
-  justify-content: center;
   align-items: flex-end;
   gap: 85px;
+
+  width: max-content;
 }
 
-/* ---------------- ITEM ---------------- */
-
 .item {
-  position: relative;
   text-decoration: none;
-  outline: none;
-
-  transition: transform 0.2s cubic-bezier(.2,.8,.2,1);
   transform-origin: center bottom;
 }
 
-.item:hover {
+.item img {
+  display: block;
+  mix-blend-mode: screen;
+  transition: transform 0.3s ease;
+}
+
+.item:hover img {
   transform: scale(1.15);
 }
 
-/* ---------------- NUMBER ---------------- */
-
-.number {
-  position: absolute;
-  top: -55px;
-  left: 10%;
-  transform: translateX(-50%);
-  color: #e6e6e6;
-  font-size: 30px;
-  font-family: 'AppleGothic';
-  font-weight: 100;
-}
-
-/* ---------------- IMAGE ---------------- */
-
-.item img {
-  display: block;
-  border: none;
-  mix-blend-mode: screen;
-}
-
-/* 개별 크기 */
-
-.item:nth-child(1) img { width: 330px; }
-.item:nth-child(2) img { width: 310px; }
-.item:nth-child(3) img { width: 179px; }
-.item:nth-child(4) img { width: 330px; }
-
-/* 숫자 위치 미세 조정 */
-
-.item:nth-child(3) .number {
-  top: -35px;
-  left: -5%;
-}
-
-.item:nth-child(4) .number {
-  top: -45px;
-  left: 3%;
-}
-
-/* ---------------- CURSOR LABEL ---------------- */
+.hand img { width: 330px; }
+.eye img { width: 310px; }
+.clock img { width: 179px; }
+.pillow img { width: 330px; }
 
 .cursor-label {
   position: fixed;
@@ -125,25 +85,18 @@ html, body {
 
 @media (max-width: 768px) {
 
- .title {
-    white-space: normal;   /* 줄바꿈 허용 */
+  .title {
     font-size: 60px;
     text-align: center;
+    white-space: normal;
   }
-  
+
   .menu {
     gap: 25px;
-    bottom: 40px;
   }
 
-  .item:nth-child(1) img { width: 120px; }
-  .item:nth-child(2) img { width: 110px; }
-  .item:nth-child(3) img { width: 70px; }
-  .item:nth-child(4) img { width: 120px; }
-
-  .number {
-    font-size: 16px;
-    top: -25px;
-  }
-
+  .hand img { width: 120px; }
+  .eye img { width: 110px; }
+  .clock img { width: 70px; }
+  .pillow img { width: 120px; }
 }
