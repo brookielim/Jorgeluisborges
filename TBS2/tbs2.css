@@ -11,7 +11,6 @@ body {
   font-family: "PPNeueMontreal-Book", sans-serif;
 }
 
-/* dream hover 시 배경 */
 body.white-bg {
   background: #ff6422;
 }
@@ -22,7 +21,6 @@ body.white-bg {
   height: 100vh;
 }
 
-/* ---------------- TEXT ---------------- */
 
 .top-text {
   position: absolute;
@@ -44,7 +42,6 @@ body.white-bg {
   font-weight: 400;
 }
 
-/* ---------------- HANDS ---------------- */
 
 .hand {
   position: absolute;
@@ -52,7 +49,6 @@ body.white-bg {
   z-index: 2;
   pointer-events: none;
 
-  /* 4초 float */
   animation: floatHand 4s ease-in-out infinite;
 }
 
