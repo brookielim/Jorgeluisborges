@@ -1,0 +1,157 @@
+@font-face {
+  font-family: 'AppleGothic';
+  src: url('./apple-gothic.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ee2568;
+  height: 100vh; 
+  overflow-x: hidden;
+  font-family: 'AppleGothic', sans-serif;
+}
+
+.scene {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  isolation: isolate; 
+}
+
+.main-text {
+  position: absolute;
+  top: 6%;
+  left: 5%;
+  font-size: 4.8vw;
+  line-height: 1.2;
+  color: #5ef4a7;
+  mix-blend-mode: exclusion;
+  z-index: 10;
+  font-weight: normal; 
+}
+
+.perhaps-text {
+  position: absolute;
+  right: 35%;
+  bottom: 33%;
+  font-size: 3.9vw;
+  color: #5ef4a7;
+  mix-blend-mode: exclusion;
+  z-index: 4;
+  font-weight: normal; 
+}
+
+.pillow {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45%;
+  z-index: 2;
+}
+
+.person {
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  z-index: 3;
+  transition: transform 0.2s ease;
+}
+
+.person:hover {
+  animation: shake 0.8s infinite alternate;
+}
+
+@keyframes shake {
+  0% { transform: translateX(-50%) rotate(-1deg); }
+  100% { transform: translateX(-50%) rotate(1deg); }
+}
+
+.blanket {
+  position: absolute;
+  bottom: -50%;
+  left: 52%;
+  transform: translateX(-50%);
+  width: 90%; 
+  z-index: 5;
+  cursor: grab;
+}
+
+.blanket:active {
+  cursor: grabbing;
+}
+
+.home-btn{
+  position:absolute;
+  top:5px;
+  right:5px;
+
+  width:100px;
+  height:100px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  cursor:pointer;
+  transition:transform 0.2s ease, opacity 0.2s ease;
+}
+
+.home-btn img{
+  width:200%;
+  height:auto;
+}
+
+.home-btn:hover{
+  transform:scale(1.1);
+  opacity:0.8;
+}
+
+@media (max-width: 768px){
+
+  .main-text{
+    font-size: 7vw;
+    top: 8%;
+    left: 6%;
+  }
+
+  .perhaps-text{
+    font-size: 6vw;
+    right: 10%;
+    bottom: 34%;
+  }
+
+  .pillow{
+    width: 70%;
+    top: 15%;
+  }
+
+  .person{
+    width: 78%;
+    bottom: 30%;
+  }
+
+  .blanket{
+    width: 120%;
+    bottom: 5%;
+    left: 50%;
+  }
+
+  .home-btn{
+    width: 60px;
+    height: 60px;
+  }
+
+  .home-btn img{
+    width: 100%;
+  }
+
+}

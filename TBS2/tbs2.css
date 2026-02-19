@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #21a045;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "PPNeueMontreal-Book", sans-serif;
+}
+
+/* dream hover 시 배경 */
+body.white-bg {
+  background: #ff6422;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* ---------------- TEXT ---------------- */
+
+.top-text {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: white;
+  font-size: 5.2vw;
+  z-index: 1;
+  font-weight: 400;
+}
+
+.bottom-text {
+  position: absolute;
+  top: 34%;
+  right: 8%;
+  color: white;
+  font-size: 5.2vw;
+  z-index: 1;
+  font-weight: 400;
+}
+
+/* ---------------- HANDS ---------------- */
+
+.hand {
+  position: absolute;
+  width: 65%;
+  z-index: 2;
+  pointer-events: none;
+
+  /* 4초 float */
+  animation: floatHand 4s ease-in-out infinite;
+}
+
+@keyframes floatHand {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.left {
+  bottom: 13%;
+  left: -19%;
+}
+
+.right {
+  bottom: -16%;
+  right: -5%;
+}
+
+/* ---------------- BUTTONS ---------------- */
+
+.circle {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background: #0762fb;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.left-circle {
+  bottom: 60%;
+  left: 23%;
+}
+
+.right-circle {
+  bottom: 32%;
+  right: 36%;
+}
+
+.circle:active {
+  transform: scale(0.85);
+}
+
+.circle.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ---------------- WORDS ---------------- */
+
+.dream-word,
+.world-word {
+  position: absolute;
+  font-family: "bd-caramel-variable", sans-serif;
+  font-variation-settings: 'BUBL' 500;
+  font-size: 9.3vw;
+  color: #4f4b4b;
+  opacity: 0;
+  z-index: 6;
+  cursor: pointer;
+}
+
+.dream-word {
+  bottom: 61%;
+  left: 21%;
+  pointer-events: none;
+}
+
+.dream-word.active {
+  pointer-events: auto;
+}
+
+.world-word {
+  bottom: 29.8%;
+  right: 30%;
+}
+
+.dream-word.hovered {
+  color: #0762fb;
+}
+
+/* ---------------- BUTTERFLY ---------------- */
+
+#worldImg {
+  display: none;
+  position: fixed;
+  width: 17vw;
+  top: 48vh;
+  left: 42vw;
+  z-index: 9998;
+
+  /* 6초 float (손과 다르게) */
+  animation: floatButterfly 3s ease-in-out infinite;
+}
+
+@keyframes floatButterfly {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(6px); }   /* 🔥 -18px → -6px */
+  100% { transform: translateY(0px); }
+}
+
+.home-btn{
+  position:absolute;
+  top:5px;
+  left:5px;
+
+  width:100px;
+  height:100px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  cursor:pointer;
+  transition:transform 0.2s ease, opacity 0.2s ease;
+}
+
+.home-btn img{
+  width:200%;
+  height:auto;
+}
+
+.home-btn:hover{
+  transform:scale(1.1);
+  opacity:0.8;
+}
+
+@media (max-width: 768px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  .top-text{
+    font-size: 7vw;
+    top: 8%;
+    left: 6%;
+  }
+
+  .bottom-text{
+    font-size: 7vw;
+    top: 28%;
+    right: 6%;
+  }
+
+  .hand{
+    width: 90%;           /* 손 크게 보이게 */
+  }
+
+  .left{
+    left: -35%;
+    bottom: 18%;
+  }
+
+  .right{
+    right: -25%;
+    bottom: -5%;
+  }
+
+  .circle{
+    width: 40px;
+    height: 40px;
+  }
+
+  .left-circle{
+    bottom: 55%;
+    left: 18%;
+  }
+
+  .right-circle{
+    bottom: 30%;
+    right: 25%;
+  }
+
+  .dream-word,
+  .world-word{
+    font-size: 14vw;
+      bottom: 45%;      /* 더 크게 */
+  }
+
+  .world-word{
+    right: 22%;
+      bottom: 19%;  
+  }
+
+  #worldImg{
+    width: 28vw;
+    top: 45vh;
+    left: 36vw;
+   bottom: 45%;
+  }
+
+  .home-btn{
+    width: 60px;
+    height: 60px;
+  }
+
+  .home-btn img{
+    width: 100%;
+  }
+
+}
+
