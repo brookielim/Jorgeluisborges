@@ -7,7 +7,7 @@ items.forEach(item => {
 });
 
 let position = 0;
-const speed = 2; 
+const speed = 1.2; 
 
 function animate() {
   position -= speed;
