@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function(){
     else if(clickCount === 3){
       clock.src = "clock1.png";
 
-      // 아래에서 살짝 등장
       screen2.classList.add("peek");
       peeked = true;
     }
@@ -32,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
   });
 
-  // 초록 화면 클릭하면 전체로 올라오기
   screen2.addEventListener("click", function(){
     if(peeked){
       screen2.classList.remove("peek");
