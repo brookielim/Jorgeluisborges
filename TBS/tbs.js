@@ -20,18 +20,15 @@ function animate() {
 
 animate();
 
-// 드래그 시작
 blanket.addEventListener("mousedown", (e) => {
   isDragging = true;
 
-  // 클릭한 지점 기준 보정
   const rect = blanket.getBoundingClientRect();
   offsetY = e.clientY - rect.top;
 
   blanket.style.cursor = "grabbing";
 });
 
-// 드래그 중
 document.addEventListener("mousemove", (e) => {
   if (!isDragging) return;
 
@@ -43,7 +40,6 @@ document.addEventListener("mousemove", (e) => {
   targetY = move;
 });
 
-// 드래그 끝
 document.addEventListener("mouseup", () => {
   if (!isDragging) return;
 
