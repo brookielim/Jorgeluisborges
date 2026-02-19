@@ -68,7 +68,6 @@ body.white-bg {
   right: -5%;
 }
 
-/* ---------------- BUTTONS ---------------- */
 
 .circle {
   position: absolute;
@@ -99,7 +98,6 @@ body.white-bg {
   pointer-events: none;
 }
 
-/* ---------------- WORDS ---------------- */
 
 .dream-word,
 .world-word {
@@ -132,7 +130,6 @@ body.white-bg {
   color: #0762fb;
 }
 
-/* ---------------- BUTTERFLY ---------------- */
 
 #worldImg {
   display: none;
@@ -142,13 +139,12 @@ body.white-bg {
   left: 42vw;
   z-index: 9998;
 
-  /* 6초 float (손과 다르게) */
   animation: floatButterfly 3s ease-in-out infinite;
 }
 
 @keyframes floatButterfly {
   0%   { transform: translateY(0px); }
-  50%  { transform: translateY(6px); }   /* 🔥 -18px → -6px */
+  50%  { transform: translateY(6px); }   
   100% { transform: translateY(0px); }
 }
 
@@ -197,7 +193,7 @@ body.white-bg {
   }
 
   .hand{
-    width: 90%;           /* 손 크게 보이게 */
+    width: 90%;      
   }
 
   .left{
@@ -228,7 +224,7 @@ body.white-bg {
   .dream-word,
   .world-word{
     font-size: 14vw;
-      bottom: 45%;      /* 더 크게 */
+      bottom: 45%;    
   }
 
   .world-word{
